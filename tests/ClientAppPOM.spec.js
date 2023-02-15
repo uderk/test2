@@ -1,8 +1,4 @@
 const { test, expect } = require("@playwright/test");
-//const {LoginPage} = require('../PageObjects/LoginPage');
-//const {DashboardPage} = require('../PageObjects/DashboardPage');
-//const {OrderPage} = require('../PageObjects/OrderPage');
-//const {OrdersHistoryPage} = require('../PageObjects/OrdersHistoryPage')
 const {POManager} = require('../PageObjects/POManager')
 
 test("Test client app - with POM", async ({page})=>{
