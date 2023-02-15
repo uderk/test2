@@ -44,7 +44,6 @@ class DashboardPage{
      await this.CountryDropDown.type("ind",{delay:250});
      await this.selectCountryResults.waitFor();
      await this.page.locator(".ta-results").waitFor();
-     this.page.pause();
      const options = await this.page.locator(".ta-results").locator("button").count();
      for(let i = 0; i<options; ++i){
       let text = await this.page.locator(".ta-results").locator("button").nth(i).textContent();

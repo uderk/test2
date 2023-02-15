@@ -8,11 +8,6 @@ const {POManager} = require('../PageObjects/POManager')
 test("Test client app - with POM", async ({page})=>{
     //define context and page
     const poManager = new POManager(page);
-   // const loginPage = new LoginPage(page);
-   // const dashboard = new DashboardPage(page);
-   // const orderPage = new OrderPage(page);
-   // const ordersHistoryPage = new OrdersHistoryPage(page);
-    //await loginPage.goTo();
     const loginPage = await poManager.getLoginPage();
     const dashboard = await poManager.getDashboardPage();
     const orderPage = await poManager.getOrderPage();
@@ -22,8 +17,8 @@ test("Test client app - with POM", async ({page})=>{
     const email = "veni.zdravkov@gmail.com";
     const password = "123456Ve@";
     const product = "zara coat 3"
-//   //actions
-//   //login
+   //actions
+
     await loginPage.goTo()
     await loginPage.validLogin(email,password);
 
@@ -36,6 +31,5 @@ test("Test client app - with POM", async ({page})=>{
     const orderID = await dashboard.getOrderID();
     await dashboard.goToOrdersHistoryPage();
     await ordersHistoryPage.checkOrder(orderID);
-    await page.pause();
 
 });
