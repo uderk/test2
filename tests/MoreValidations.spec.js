@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-test("More validation - chapter 7", async ({browser}) =>
+test("@Web More validation - chapter 7", async ({browser}) =>
 {
 // define context and browser 
 const context = await browser.newContext();

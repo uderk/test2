@@ -19,7 +19,7 @@ test.beforeAll(async ({browser})=>{
     webContext = await browser.newContext({storageState: 'state.json'})
 })
 
-test("Login app", async ({}) =>
+test("@API Login app", async ({}) =>
 {  
     //elements and products
     const page = await webContext.newPage();

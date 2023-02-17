@@ -4,7 +4,7 @@ const dataSet = JSON.parse(JSON.stringify(require("../tests/utils/placeOrderTest
 
 for(const data of dataSet){
 
- test(`Test client app - with POM ${data.product}`, async ({page})=>{
+ test(`@Web Test client app - with POM ${data.product}`, async ({page})=>{
      //define context and page
      const poManager = new POManager(page);
      const loginPage = await poManager.getLoginPage();

@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-test("First playwright test", async ({browser}) =>
+test("@Web First playwright test", async ({browser}) =>
 {
    //if additional information necessary like cookies or proxy or different browser
     //define page and context 
